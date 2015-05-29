@@ -158,6 +158,13 @@ function updateInvoice() {
    /* ========================================================================== */
 
 function onContentLoad() {
+    var day = new Date()
+    var pretty_date = ("" + day).split(" ").slice(0, 4).join(" ");
+    document.getElementById('invoice_date').innerHTML = pretty_date;
+
+    var invoice_number = day.toISOString().replace(/-/g, '').slice(0, 8);
+    document.getElementById('invoice_number').innerHTML = invoice_number;
+    
     updateInvoice();
     
     var input = document.querySelector('input'),
