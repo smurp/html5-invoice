@@ -136,6 +136,10 @@ aside h1 { border-color: #999; border-bottom-style: solid; }
 
 tr:hover .cut { opacity: 1; }
 
+.logo > span {
+    margin:0px;
+}
+
 @media print {
 	* { -webkit-print-color-adjust: exact; }
 	html { background: none; padding: 0; }
